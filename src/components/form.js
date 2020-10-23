@@ -11,14 +11,14 @@ const Form = (props) => {
   const elementos = campos.map((c) => {
     nombre = c.input.name;
     return (
-      <div class="form-group">
+      <div className="form-group">
         <label htmlFor={c.label.htmlFor}>{c.label.text}</label>
         <input
           type={c.input.type}
           name={c.input.name}
           placeholder={c.input.placeholder}
           onChange={handleChange}
-          class="form-control"
+          className="form-control"
           id={c.input.id}
         ></input>
         {errors[nombre] && <p>{errors[nombre]}</p>}
@@ -28,11 +28,11 @@ const Form = (props) => {
   return (
     <div>
       <Theme.Consumer>
-        {(value) => <h1 classname={value}>Register Form</h1>}
+        {(value) => <h1 className={value}>Register Form</h1>}
       </Theme.Consumer>
       <form onSubmit={handleSubmit}>
         {elementos}
-        <button class="btn-primary">Send</button>
+        <button className="btn-primary">Send</button>
       </form>
     </div>
   );

@@ -21,6 +21,7 @@ export default function validateForm(values, rules) {
 
     console.log(bol);
 
+    // eslint-disable-next-line
     if (eval(bol)) {
       err[rules[i]["name"]] = rules[i]["msg"];
     }
